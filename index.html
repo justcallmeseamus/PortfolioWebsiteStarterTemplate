@@ -8,20 +8,66 @@
 <body>
     <!--Row 1 of mock up-->
   <div class="grid">
+      
     <div class="row">
-      <div class="col-1">1 column 50% page width</div>
-      <div class="col-1">1 column, 50% page width</div>
+      <div class="col-3">
+          <div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_fjords.jpg" style="width:100%">
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+        </div>
+      <div class="col-1">
+          <h1>Seamus Talosa</h1>
+        </div>
     </div>
       
       <!-- Row 2 of Mock Up: Determine number of columns-->
       <div class="row">
-      <div class="col-2">1 column 50% page width</div>
+      <div class="col-4">
+    <div align= right>
+    <a href="https://placeholder.com"><img src="http://via.placeholder.com/800x500"></a>
+          </div>
+          </div>
     </div>
       
       <!-- Row 3 of Mock Up: Determine number of columns-->
-      
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-1"><a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a></div>
+        <div class="col-1"><a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a></div>
+        <div class="col-1"><a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a></div>
+     
+    </div>
       <!-- Row 4 of Mock Up: Determine number of columns-->
-        
+    <div class="col-1"></div>
+    <div class="col-1"><h2></h2></div>
+    <div class="col-1"><h2></h2></div>
+    <div class="col-1"><h2></h2></div>
   </div>
 </body>
 </html>
